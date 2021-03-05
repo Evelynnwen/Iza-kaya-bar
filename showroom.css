@@ -1,0 +1,392 @@
+body {
+  margin:0;
+  padding: 0;
+  background-color: #f5e6d4;
+}
+section{
+  height:100vh;
+  position:relative;
+}
+.one{
+  background-image: url('moonlight.jpg');
+  background-size: 100% 100%;
+}
+
+h3{
+  font-size: 30px;
+  padding: 400px 200px;
+  font-family: monospace;
+  font-weight: normal;
+  max-width: 400px;
+}
+h3:hover{
+  color: rgb(255, 255, 255);
+}
+
+.curtain__wrapper {
+  width: 100%;
+}
+ 
+.curtain__panel--left {
+    width: 50%;
+    height: 810px; 
+    float: left; 
+    background:  linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('wave.jpg');
+    background-size: 1000px 810px;
+    border: 5px solid #333;
+    position: relative; /* z index won't function unless the element is positioned */
+    z-index: 2; /* makese sure the curtain is in front of the inner content element */
+    transition: all 1s ease-out; /* targets the transition with timing and animation style */
+  
+}
+
+.curtain__prize {
+  position: absolute; /* Forces the prize position into the container start */
+  z-index: 1; /* Makes it so when the front curtains are moved the prize is revealed underneath. */
+  margin-left: 50px;
+  margin-top: 20px;
+} 
+
+.btn {
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 14px 28px;
+  left: 150px;
+  top: 300px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success {background-color: #e1b0ce;} 
+.success:hover {background-color: #94bbe9;}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100px;
+  height: 200px;
+  margin-top: 350px;
+}
+
+.container .bt {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .bt:hover {
+  background-color: black;
+}
+/* Door */
+.washingmachine .door {
+  position: absolute;
+  top: 90px;
+  left: 80%;
+  margin-left: -97px;
+  width: 150px;
+  height: 150px;
+  border: 22px solid #8ca9c2;
+  border-radius: 97px;
+  background-image: linear-gradient(to bottom, rgba(73, 96, 88, 0.85) 0%, rgba(87, 115, 105, 0.85) 100%);
+  transform: translateZ(0);
+  animation: close 0.5s ease-in 0s 1 forwards;
+}
+
+/* Open door on hover */
+.washingmachine:hover .door {
+  transform: translateZ(0);
+  animation: open 0.5s ease-in 0s 1 forwards;
+}
+
+.washingmachine .drum {
+  position: absolute;
+  top: 114px;
+  left: 80%;
+  margin-left: -74px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #202926;
+}
+
+.washingmachine .drum:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "Tada";
+  color: rgb(214, 200, 200);
+  font-family: monospace;
+  font-size: 30px;
+  text-align: center;
+  line-height: 140px;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.washingmachine:hover .drum:before {
+  opacity: 1;
+}
+/* Animate to open */
+@keyframes open {
+  from {
+      transform: perspective(1000px) rotateY(0deg);
+      transform-origin: 0% 0%;
+  }
+  to {
+      transform: perspective(1000px) rotateY(-105deg);
+      transform-origin: 0% 0%;
+  }
+}
+
+/* Animate to closed */
+@keyframes close {
+  from {
+      transform: perspective(1000px) rotateY(-105deg);
+      transform-origin: 0% 0%;
+  }
+  to {
+      transform: perspective(1000px) rotateY(0deg);
+      transform-origin: 0% 0%;
+  }
+}
+
+.popup {
+  position: absolute;
+  left: 200px;
+  top:160px;
+  font-size: 20px;
+  font-family: monospace;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgb(235, 210, 210);
+  color: rgb(36, 36, 36);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(227, 203, 203) transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.alert {
+  padding: 50px;
+  background-color: #6e7f91;
+  color: white;
+  position: absolute;
+  top:280px;
+
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+#ulink{
+width: 300px;
+padding: 50px 0;
+left: 1000px;
+top:300px;
+position: absolute;
+text-align: center;
+background-color: rgb(190, 160, 147);
+margin-top: 20px;
+display: none;
+}
+
+.ulink{
+  position: absolute;
+  background-color: #bf8e66;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 60px;
+  left: 1200px;
+  top: 400px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.rights{
+  width: 100%;;
+  
+}
+.flip-card {
+  background-color: transparent;
+  position: absolute;
+  top: 500px;
+  left: 800px;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+}
+
+.flip-card-back {
+  background-color: #d8c4a5;
+  color: rgb(164, 83, 83);
+  transform: rotateY(180deg);
+}
+#treabox:hover{
+  color:beige;
+  
+}
+
+#boat {
+  background-color: #e7e7e7; 
+  color: black;
+  font-family: monospace;
+  position: absolute;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 20px;
+  right: 900px;
+  bottom: 100px;
+  font-size: 16px;
+} 
+#boat:hover {
+  background-color: #2e2e2e;
+}
+
+.snack{
+    width: 20px;
+    height: 60px;
+    left: 1300px;
+    top: 650px;
+    background: rgb(114, 100, 89);
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: 225px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

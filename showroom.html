@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Show Room</title>
+<link href="showroom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section class="one" id="one">
+        <h3 id="tag-one" onclick="myFunction()">Welcome! Click me</h3>
+    </section>
+    <section class="two" id="two">
+        <div class="curtain">
+            <div id="ldoor" class="curtain__panel--left" onclick="opendoor()"></div>
+            <div class="curtain__prize">
+                <button class="btn success" id="tag-five" onclick = "gotYou()">Don't touch</button>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>Danger!</strong> Suspicious items detected, Don't tear off the seal.
+                  </div>
+                <h4 id="twister"></h4>
+                <h4 id="tag-two" onclick="changeOurText()">Why did the two 4 skip lunch?</h4>
+                <div class="container">
+                <img src="IMG_1832.jpg" alt="bar image" style="width:100%">
+                <button class="bt" id="tag-four" onclick="noName()"></button>
+                </div>
+                <br>
+                <div class="popup" onclick="myPop()">Life is boring
+                    <span class="popuptext" id="myPopup">Get some surprise!</span>
+                  </div>
+            </div>
+        </div>
+        <button class="ulink" onclick="uLink()"></button>
+        <div id="ulink">
+            Oh, You have found a gateway to another digital space. Are you ready to be teleported? <br>
+            <a href="https://abbygklui.github.io/ocean/">confirm</a>
+        </div>
+      <div class="washingmachine">
+            <div class="drum"></div>
+          <div class="door"></div>
+      </div>
+<div class="rights">
+    <button id="boat" onclick="myBoat()">Passphrase</button>
+    <div class="snack" onclick="mySnack()"></div>
+        <div id="snackbar">Nothing really happened..</div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="flat card.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+            <br>
+            <h1>Treasure Box</h1> 
+            <p>Oh, my dear friend</p>
+            <p>This is a boat ticket to the Treasure Island.</p>
+            <p>Ready to seek the treasure</p> 
+            <h2 id="treabox" onclick="treaBox()">Set off!</h2>
+        </div>
+    </div>
+</div>
+    </section>
+    <script src='cc.js'></script>
+</body>
+</html>

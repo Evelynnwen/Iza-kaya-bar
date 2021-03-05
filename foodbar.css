@@ -1,0 +1,534 @@
+body {
+    margin:0;
+    background-image: url('IMG_1859.JPG');
+    background-size: 100% 50%;
+}
+
+section {
+    height:100vh;
+    position:relative;
+    
+}
+  
+.next {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    font-size:300%;
+}
+.next:after {
+    content:'*';
+}
+  
+.one {
+    background-color:rgb(224, 205, 180);
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.two {
+    background-color: #f3f8f2;
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 96%;
+}
+.three {
+    background-color: #fefdf9;
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 96%;
+}
+
+.four {
+    background-color: #f2f2f1;
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 96%;
+}
+
+.five{
+    background-color: #fefdf9;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    opacity: 96%;
+}
+
+h2,p {
+    margin: 60px;
+    line-height: 1.5em;
+}
+h2{
+    text-align: center;
+}
+p {
+    font-size: 16px;
+}
+.intro{
+    display: flex;
+}
+span {
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    text-align: center;
+    padding: 16px;
+}
+
+.qwq{
+    padding: 3px;
+}
+h3{
+    margin:50px;
+}
+
+hr.dashed {
+    border-top: 3px dashed #bbb;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+margin: 50px;
+padding: 0;
+}
+
+/* Style the list items */
+ul li {
+cursor: pointer;
+position: relative;
+padding: 12px 8px 12px 40px;
+list-style-type: none;
+background: #f9f9f9;
+font-size: 18px;
+transition: 0.2s;
+
+/* make the list items unselectable */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+background: #ffffff;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+background: #fdeedf;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+background: #4c9489;
+color: #fff;
+text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+content: '';
+position: absolute;
+border-color: #fff;
+border-style: solid;
+border-width: 0 2px 2px 0;
+top: 10px;
+left: 16px;
+transform: rotate(45deg);
+height: 15px;
+width: 7px;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+background-color: #852929;
+color: white;
+}
+
+/* Style the header */
+.header {
+padding: 30px 30px;
+background-color: rgb(46, 39, 92);
+color: rgb(0, 0, 0);
+text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Style the input */
+input {
+margin: 0;
+border: none;
+border-radius: 0;
+width: 75%;
+padding: 10px;
+float: left;
+font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+padding: 7.5px;
+width: 25%;
+background: #e0ab23;
+color: #42403c;
+float: left;
+text-align: center;
+font-size: 20px;
+font-weight: 250;
+font-family: 'Trebuchet MS', sans-serif;
+cursor: pointer;
+transition: 0.3s;
+border-radius: 15px;
+}
+
+.addBtn:hover {
+background-color: #c46d2b;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(170, 57, 32);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color:  #4c9489;
+  }
+
+  .button {
+    position: absolute;
+    background-color: #347cca;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #000000;
+    bottom: 20px;
+    padding: 10px;
+    left: 640px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: #dcdedc;
+    transition: all 0.8s
+  }
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url('IMG_1863.JPG');
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #0b0b0b;
+    font-weight: 300;
+    font-family: 'VT323', monospace;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+.glass {    
+    position: absolute;
+    left: 120px;
+    height: 100px;
+    width: 70px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 5px;
+    bottom: 129px;
+}
+
+.beer {
+    position: absolute;
+    bottom: 15px;
+    margin: 0 5px;
+    height: 60%;
+    width: 60px;
+    background-color: #ffce54cc;
+    border-radius: 0 0 5px 5px;
+    border-top: solid 0px #ffce54cc;
+}
+.beer:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    height: 20px;
+    width: 100%;
+    background-color: white;
+    top: -20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.showbar{
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-right: 90px;
+    height: 543px;
+    background-color:#c77d62;
+}
+.showb{
+    width: 100%;
+    height: 20px;
+    background-color: #cab5af;
+}
+
+.detail1,
+.detail2,
+.detail3,
+.detail4{
+	position: absolute;
+	display:block;
+
+}
+
+.detail1 {
+	left: 135px;
+	background: #1c213db9;
+    height: 212px;
+	width: 270px;
+}
+  
+.detail2 {
+	left: 410px;
+	background: #f5c8c0;
+    height: 300px;
+	width: 120px;
+}
+
+.detail3 {
+	left: 500px;
+	background-color:rgb(70, 111, 152);
+    background-image: radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, 0.527) 99%),
+    radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%);
+    background-size:80px 80px;
+    background-position:0 0, 40px 40px;
+    height: 112px;
+	width: 150px;
+}
+
+.detail4 {
+	left: 655px;
+    height: 120px;
+	width: 150px;
+	background:  #f0d7b1;
+}
+
+.detail5,
+.detail6,
+.detail7{
+	position: absolute;
+	display:block;
+
+}
+.detail5 {
+	left: 810px;
+    height: 113px;
+	width: 150px;
+	background:  #f5eae8;
+}
+.detail6 {
+	left: 965px;
+    height: 212px;
+	width: 150px;
+	background-color:#083672;
+	background-image:
+	radial-gradient(circle at 100% 150%, #083672 24%, #a19292 24%, #a19292 28%, #083672 28%, #083672 36%,  #a19292 36%,   #a19292 40%, transparent 40%, transparent),
+	radial-gradient(circle at 0    150%, #083672 24%, #a19292 24%,  #a19292 28%, #083672 28%, #083672 36%,  #a19292 36%,  #a19292 40%, transparent 40%, transparent),
+	radial-gradient(circle at 50%  100%,  #a19292 10%, #083672 10%, #083672 23%,  #a19292 23%,  #a19292 30%, #083672 30%, #083672 43%,  #a19292 43%,  #7986a3 50%, #083672 50%, #083672 63%,  #7986a3 63%,  #7986a3 71%, transparent 71%, transparent),
+	radial-gradient(circle at 100% 50%,  #a19292 5%, #083672 5%,#083672 15%,  #a19292 15%,  #a19292 20%, #083672 20%, #083672 29%, #a19292 29%,  #7986a3 34%, #083672 34%, #083672 44%,  #7986a3 44%,  #7986a3 49%, transparent 49%, transparent),
+	radial-gradient(circle at 0    50%,  #a19292 5%, #083672 5%, #083672 15%,  #a19292 15%,  #a19292 20%, #083672 20%, #083672 29%, #a19292 29%,  #7986a3 34%, #083672 34%, #083672 44%, #7986a3 44%,  #7986a3 49%, transparent 49%, transparent);
+	background-size: 100px 50px;
+}
+.detail7 {
+	left: 1120px;
+    height: 126px;
+	width: 130px;
+	background:  #edded2;
+}
+
+.cup2 {
+    position:absolute;
+    bottom: 5px;
+    height:35px;
+    width:30px;
+    left: 75px;
+    z-index:0;
+    border-radius: 0 0 8px 8px;
+    background-color:#ddcbcb;
+  }
+.cup2::before {
+    content:"";
+    position:absolute;
+    top:35px;
+    left:5px;
+    height:5px;
+    width:20px;
+    background-color:#c9c1c1;
+}
+.cup2::after {
+    content:"";
+    position:absolute;
+    top:5px;
+    left:4px;
+    width:4px;
+    height:20px;
+    border-radius:10px;
+    background-color:white;
+}
+
+#bottle {
+    position: absolute;
+    width: 50px;
+    left: 130px;
+    height: 50px;
+    top: -58px;
+}
+
+#bottle .cork {
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        top: -10px;
+        border-radius: 2px 2px 0 0;
+        border-bottom: solid 3px #54322f;
+}
+#bottle .cork:before {
+        position: absolute;
+        top: 5px;
+        left: -2px;
+        display: block;
+        content: " ";
+        background-color: #170301;
+        width: 24px;
+        height: 10px;
+        border-radius: 2px;
+}
+#bottle .neck {
+        margin: 0 auto;
+        background-color: #170301;
+        width: 20px;
+        height: 30px;
+}
+#bottle .body {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 30px;
+        background-color: #301212e7;
+        width: 50px;
+        height: 125px;
+        border-radius: 20px 20px 5px 5px;  
+ }
+
+#bottle .label {
+        position: relative;
+        background-color: #F2EAB9;
+        height: 30px;
+        top: 10px;
+        border: solid 2px #CFC89B;
+}
+
+.glass2 {    
+    position: absolute;
+    left: 830px;
+    height: 200px;
+    width: 170px;
+    top: -42px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 50px 0 0 0;
+}
+.foodq {    
+    position: absolute;
+    height: 230px;
+    left: 12px;
+    top: -30px;
+    width: 200px;
+    background-image: url('IMG_1827.png');
+    background-size: 200px 230px; 
+    border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 550px;
+    font-size: 60px;
+    font-family: 'Marker Felt', fantasy;
+}
