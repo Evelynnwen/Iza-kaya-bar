@@ -70,7 +70,6 @@ function treaBox() {
 
 function myBoat() { 
     alert("Your passphrase for going to the garden of Avalon is 'https://shiqing-w.github.io/Garden/'. You may go there through the search bar of your browser, Good Luck!");  
-    document.getElementById("boat").innerHTML = "Good Luck!";
 }
 
 function mySnack() {
