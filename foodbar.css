@@ -308,9 +308,10 @@ background-color: #c46d2b;
 
 .glass {    
     position: absolute;
-    left: 120px;
+    left: 70px;
     height: 100px;
     width: 70px;
+    top: 428px;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.3); 
     border-radius: 5px;
@@ -339,10 +340,12 @@ background-color: #c46d2b;
 }
 
 .showbar{
+    position: absolute;
     margin-top: 50px;
     margin-left: 90px;
     margin-right: 90px;
-    height: 628px;
+    width: 1200px;
+    height: 528px;
     background-color:#c77d62;
 }
 .showb{
@@ -361,21 +364,21 @@ background-color: #c46d2b;
 }
 
 .detail1 {
-	left: 135px;
+	left: 35px;
 	background: #1c213db9;
     height: 212px;
 	width: 270px;
 }
   
 .detail2 {
-	left: 410px;
+	left: 310px;
 	background: #f5c8c0;
     height: 300px;
 	width: 120px;
 }
 
 .detail3 {
-	left: 500px;
+	left: 400px;
 	background-color:rgb(70, 111, 152);
     background-image: radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, 0.527) 99%),
     radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%);
@@ -386,7 +389,7 @@ background-color: #c46d2b;
 }
 
 .detail4 {
-	left: 655px;
+	left: 555px;
     height: 120px;
 	width: 150px;
 	background:  #f0d7b1;
@@ -400,13 +403,13 @@ background-color: #c46d2b;
 
 }
 .detail5 {
-	left: 810px;
+	left: 710px;
     height: 113px;
 	width: 150px;
 	background:  #f5eae8;
 }
 .detail6 {
-	left: 965px;
+	left: 865px;
     height: 212px;
 	width: 150px;
 	background-color:#083672;
@@ -419,7 +422,7 @@ background-color: #c46d2b;
 	background-size: 100px 50px;
 }
 .detail7 {
-	left: 1120px;
+	left: 1020px;
     height: 126px;
 	width: 130px;
 	background:  #edded2;
@@ -528,7 +531,7 @@ background-color: #c46d2b;
 
 h1{
     text-align: center;
-    margin-top: 650px;
+    margin-top: 550px;
     font-size: 60px;
     font-family: 'Marker Felt', fantasy;
 }
