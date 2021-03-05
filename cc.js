@@ -69,7 +69,7 @@ function treaBox() {
 }
 
 function myBoat() { 
-    alert("Your passphrase for going to the garden of Avalon is 'http://webspace.ocad.ca/~3178684/garden/gardenfp.html'. You may go there through the search bar of your browser, Good Luck!");  
+    alert("Your passphrase for going to the garden of Avalon is 'https://shiqing-w.github.io/Garden/'. You may go there through the search bar of your browser, Good Luck!");  
 }
 
 function mySnack() {
